@@ -12,8 +12,9 @@ export const TaskBar = () => {
                     return (
                         <div className='flex flex-col items-center gap-2' onClick={() => {
                             taskValues.setFolderOpen(old => old.map((ele, i) => i === item.idx ? !ele : ele))
+                            key = { idx }
                         }}>
-                            <img src={`/assets/${item.icon}`} alt="" className="drop-shadow-md" style={{ height: "35px" }} key={idx} />
+                            <img src={`/assets/${item.icon}`} alt="" className="drop-shadow-md" style={{ height: "35px" }} />
                             <div className={`w-[50%] h-[2px] ${item.opened ? "bg-[rgba(150,150,150,0.8)]" : "bg-transparent"}`} />
                         </div>
                     )
