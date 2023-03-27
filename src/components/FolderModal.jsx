@@ -38,8 +38,7 @@ export const FolderModal = ({ containerRef, name, icon, idx, windowsElement }) =
                             <img src={`/assets/${icon}`} alt="" style={{ maxHeight: "25px", objectFit: "contain" }} />
                         </div>
                         <div className="w-[100%] h-[100%] bg-[rgb(36,36,36,1)] rounded-b ">
-                            {/* {windowsElement} */}
-                            <MySelf />
+                            {windowsElement}
                         </div>
                     </div>
                 </Draggable>

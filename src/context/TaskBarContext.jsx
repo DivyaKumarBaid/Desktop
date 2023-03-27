@@ -1,4 +1,5 @@
 import React from 'react'
+import { MySelf } from '../apps/MySelf';
 import { Terminal } from '../apps/Terminal';
 
 const taskContext = React.createContext();
@@ -34,7 +35,7 @@ const initialTasks = [
 
 export const Folders = [
     {
-        windowsElement: <Terminal />,
+        windowsElement: <MySelf />,
         name: "MySelf",
         icon: "folder.png"
     },
