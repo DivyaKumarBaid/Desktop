@@ -31,7 +31,7 @@ export const SingleFolder = (props) => {
                 break;
             }
             default: {
-                setDoubleClick(old => old.map(item => true));
+                props.setDoubleClick(old => old.map(item => true));
                 break;
             }
         }
@@ -50,7 +50,7 @@ export const SingleFolder = (props) => {
                 <img src={`/assets/${props.icon}`} className="folders" alt="" />
                 <span className='folderText'>{props.name}</span>
             </div>
-            <FolderModal {...{ containerRef, name: props.name, icon: props.icon, idx: props.idx }} />
+            <FolderModal {...{ containerRef, name: props.name, icon: props.icon, idx: props.idx, windowsElement: props.windowsElement }} />
         </>
     )
 }

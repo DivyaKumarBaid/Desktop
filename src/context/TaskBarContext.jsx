@@ -1,16 +1,11 @@
 import React from 'react'
+import { Terminal } from '../apps/Terminal';
 
 const taskContext = React.createContext();
 
 export const useTask = () => React.useContext(taskContext);
 
 const initialTasks = [
-    {
-        opened: false,
-        containerRef: null,
-        name: "terminal",
-        icon: "terminal.png",
-    },
     {
         opened: false,
         containerRef: null,
@@ -37,24 +32,29 @@ const initialTasks = [
     },
 ]
 
-const Folders = [
+export const Folders = [
     {
+        windowsElement: <Terminal />,
         name: "MySelf",
         icon: "folder.png"
     },
     {
+        windowsElement: <Terminal />,
+        name: "Terminal",
+        icon: "terminal.png",
+    },
+    {
+        windowsElement: <Terminal />,
         name: "LinkedIn",
         icon: "linkedin.svg"
     },
     {
-        name: "Chrome",
-        icon: "chrome.svg"
-    },
-    {
+        windowsElement: <Terminal />,
         name: "Contact",
         icon: "gmail.svg"
     },
     {
+        windowsElement: <Terminal />,
         name: "Github",
         icon: "github.svg"
     },

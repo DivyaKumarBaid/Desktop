@@ -1,9 +1,10 @@
 import { Grow } from '@mui/material';
 import React from 'react'
 import Draggable from 'react-draggable'
+import { Terminal } from '../apps/Terminal';
 import { useTask } from '../context/TaskBarContext';
 
-export const FolderModal = ({ containerRef, name, icon, idx }) => {
+export const FolderModal = ({ containerRef, name, icon, idx, windowsElement }) => {
 
     const taskValues = useTask();
 
@@ -35,7 +36,9 @@ export const FolderModal = ({ containerRef, name, icon, idx }) => {
                             <div>{name}</div>
                             <img src={`/assets/${icon}`} alt="" style={{ maxHeight: "25px", objectFit: "contain" }} />
                         </div>
-                        <div className="w-[100%] h-[100%] bg-[rgb(36,36,36,1)] rounded-b "></div>
+                        <div className="w-[100%] h-[100%] bg-[rgb(36,36,36,1)] rounded-b ">
+                            {windowsElement}
+                        </div>
                     </div>
                 </Draggable>
             </div>

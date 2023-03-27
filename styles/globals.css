@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@600;700&family=Rubik:wght@400;500;600;700&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@600;700&family=Rubik:wght@400;500;600;700&family=Yeseva+One&family=Source+Code+Pro&family=Yeseva+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +10,7 @@
 font-family: 'Libre Baskerville', serif;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Rubik', sans-serif;
+font-family: 'Source Code Pro', monospace;
 font-family: 'Yeseva One', cursive; */
 
 
@@ -50,8 +51,16 @@ font-family: 'Yeseva One', cursive; */
 .hoveringFolder:hover{
   background: rgba(90,90,90,0.3) !important;
 }
-.folderText{
+.folderText,.handleDrag{
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+.typeTerminal input{
+  margin-left: 8px;
+  background: transparent;
+  outline: none;
+}
+.typeTerminal input:focus{
+  border: none;
 }
