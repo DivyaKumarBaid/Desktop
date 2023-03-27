@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@600;700&family=Rubik:wght@400;500;600;700&family=Yeseva+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* font-family: 'DM Sans', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Yeseva One', cursive; */
+
+
+*{
+  margin:0;
+  padding:0;
+}
+.desktop{
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/wallpaper.png'),rgb(0,0,0);
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.taskBar>*{
+  cursor:pointer;
+  transition:transform 0.3s;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.taskBar>*:hover{
+  transform: translateY(-4px);
+  transition: transform 0.3s;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.homeScreen img{
+  width: 45px;
+  height: 45px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.hoveringFolder:hover{
+  background: rgba(90,90,90,0.3) !important;
+}
+.folderText{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
