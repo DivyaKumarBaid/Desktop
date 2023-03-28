@@ -15,17 +15,23 @@ export const Desktop = () => {
 
     return (
         <>
-            <div className="w-[100%] h-[95%] flex justify-start items-start">
-                <div className="homeScreen flex flex-col flex-wrap gap-[16px] max-w-[90%] w-min max-h-[95%] px-3 text-[rgba(256,256,256,0.8)] items-start justify-center">
+            <div className="w-[100%] h-[95%] flex justify-between items-start">
+                <div className="homeScreen flex flex-col flex-wrap gap-[20px] max-w-[90%] w-max h-[90%] px-3 text-[rgba(256,256,256,0.8)] items-start justify-start">
                     {Folders.map((item, idx) => {
-                        return (
-                            <div key={idx} >
-                                <SingleFolder {...item} singleClick={singleClick[idx]} doubleClick={doubleClick[idx]} idx={idx} setSingleClick={setSingleClick} setDoubleClick={setDoubleClick} windowsElement={item.windowsElement} />
-                            </div>
-                        )
+                        return item.onDesktop ? (
+                            item.link != "/" ?
+                                <a href={item.link}>
+                                    <div key={idx} >
+                                        <SingleFolder {...item} singleClick={singleClick[idx]} doubleClick={doubleClick[idx]} idx={idx} setSingleClick={setSingleClick} setDoubleClick={setDoubleClick} windowsElement={item.windowsElement} />
+                                    </div>
+                                </a> :
+                                <div key={idx} >
+                                    <SingleFolder {...item} singleClick={singleClick[idx]} doubleClick={doubleClick[idx]} idx={idx} setSingleClick={setSingleClick} setDoubleClick={setDoubleClick} windowsElement={item.windowsElement} />
+                                </div>
+                        ) : null
                     })}
                 </div>
-                <div className="w-[100%] h-[100%]" onClick={() => { handleOnBlur() }}></div>
+                <div className="w-[80%] h-[100%]" onClick={() => { handleOnBlur() }}></div>
             </div>
         </>
     )

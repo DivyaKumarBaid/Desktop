@@ -1,6 +1,9 @@
 import React from 'react'
+import { FolderStructure } from '../apps/FolderStructure';
 import { MySelf } from '../apps/MySelf';
 import { Terminal } from '../apps/Terminal';
+import { project } from '../components/Projects';
+import { WorkCard } from '../components/WorkCard';
 
 const taskContext = React.createContext();
 
@@ -33,34 +36,96 @@ const initialTasks = [
     },
 ]
 
+const projectsSubFolders = project.map((item, idx) => {
+    return ({
+        name: `${item.name}.exe`,
+        icon: "chrome.svg",
+        windowsElement: <WorkCard {...item} key={"work" + idx} />,
+        onDesktop: false,
+        link: "/"
+    })
+});
+
+// const projectsSubFolders = [
+//     {
+//         name: "Well-Being.exe",
+//         icon: "chrome.svg",
+//         windowsElement: <MySelf />,
+//         onDesktop: false,
+//         link: "/"
+//     },
+//     {
+//         name: "Well-Being.exe",
+//         icon: "chrome.svg",
+//         windowsElement: <MySelf />,
+//         onDesktop: false,
+//         link: "/"
+//     },
+//     {
+//         name: "Well-Being.exe",
+//         icon: "chrome.svg",
+//         windowsElement: <MySelf />,
+//         onDesktop: false,
+//         link: "/"
+//     },
+// ]
+
 export const Folders = [
     {
-        windowsElement: <MySelf />,
-        name: "MySelf",
+        link: "/",
+        onDesktop: true,
+        windowsElement: <FolderStructure subFolders={projectsSubFolders} />,
+        name: "Projects",
         icon: "folder.png"
     },
     {
+        link: "/",
+        subFolder: [{}],
+        onDesktop: true,
+        windowsElement: <MySelf />,
+        name: "MySelf.txt",
+        icon: "notebook.png"
+    },
+    {
+        link: "/resume.pdf",
+        onDesktop: true,
+        windowsElement: <MySelf />,
+        name: "Resume",
+        icon: "resume.png"
+    },
+    {
+        link: "/",
+        subFolder: [{}],
+        onDesktop: true,
         windowsElement: <Terminal />,
         name: "Terminal",
         icon: "terminal.png",
     },
     {
+        link: "https://www.linkedin.com/in/divyakumarbaid",
+        onDesktop: true,
         windowsElement: <Terminal />,
         name: "LinkedIn",
         icon: "linkedin.svg"
     },
     {
+        link: "/",
+        subFolder: [{}],
+        onDesktop: true,
         windowsElement: <Terminal />,
         name: "Contact",
         icon: "gmail.svg"
     },
     {
+        link: "https://github.com/DivyaKumarBaid",
+        onDesktop: true,
         windowsElement: <Terminal />,
         name: "Github",
         icon: "github.svg"
     },
-
+    , ...projectsSubFolders,
 ]
+
 
 export const TaskBarContextProvider = ({ children }) => {
 
