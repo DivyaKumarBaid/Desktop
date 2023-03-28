@@ -13,6 +13,13 @@ font-family: 'Rubik', sans-serif;
 font-family: 'Source Code Pro', monospace;
 font-family: 'Yeseva One', cursive; */
 
+:root{
+  --black-color:rgb(0,0,0);
+  --white-color:rgb(255,255,255);
+  --background-color:rgb(245,240,250);
+  --card-color:rgba(150,150,180,0.1);
+}
+
 /* scroll bar */
 
 /* width */
@@ -214,7 +221,8 @@ font-family: 'Yeseva One', cursive; */
   font-size: 1em;
 }
 .projectName{
-  font-family: 'LemonMilkMedium','Martel Sans';
+  font-family: 'Montserrat','Martel Sans';
+  font-weight: bolder;
   color: var(--light1);
   letter-spacing: 5px;
   font-size: 1.6em;
@@ -275,3 +283,49 @@ font-family: 'Yeseva One', cursive; */
   margin: 0px 15px 0px 0px;
 }
 /* workcard */
+
+/* spotify */
+
+.music-card{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  align-items: center;
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px rgba(56,56,56,0.2);
+}
+
+.music-card-img{
+  width: 18vw;
+  height: 18vw;
+  min-width: 250px;
+  min-height: 250px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 8px rgba(56,56,56,0.6);
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.controls-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.play-btn,.pause-btn{
+  cursor: pointer;
+  font-size: 40px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap:100px;
+  margin: 40px 0px 20px 0px;
+}
+/* spotify */

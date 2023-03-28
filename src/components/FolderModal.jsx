@@ -26,7 +26,7 @@ export const FolderModal = ({ containerRef, name, icon, idx, windowsElement }) =
             container={containerRef.current}
         >
             <div className='fixed z-[10] bg-white'>
-                <Draggable handle={`.handleDrag${idx}`} defaultPosition={{ x: 200, y: 0 }}>
+                <Draggable handle={`.handleDrag${idx}`} defaultPosition={{ x: 200, y: -100 }}>
                     <div className="w-[60vw] h-[70vh] fixed z-[10] shadow-3xl">
                         <div className={`handleDrag${idx} w-[100%] h-max bg-[rgba(90,90,90,0.2)] backdrop-blur-[8px] rounded-t flex flex-row-reverse justify-between items-center p-2 pr-4`}>
                             <div className="flex gap-4">

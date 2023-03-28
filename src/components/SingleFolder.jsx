@@ -40,7 +40,7 @@ export const SingleFolder = (props) => {
     return (
         <>
             <div
-                className="cursor-pointer flex flex-col items-center justify-center w-max text-xs gap-[4px] py-2 px-4 rounded hoveringFolder"
+                className="cursor-pointer flex flex-col items-center justify-center w-max text-xs gap-1 py-2 px-4 rounded hoveringFolder"
                 style={{
                     background: props.singleClick ? "rgba(90,90,90,0.5)" : props.doubleClick ? "rgba(90,90,90,0.9)" : "transparent"
                 }}

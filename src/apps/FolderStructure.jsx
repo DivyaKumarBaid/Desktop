@@ -27,7 +27,7 @@ export const FolderStructure = (props) => {
                     <div className="hover:bg-[rgba(90,90,90)] w-[100%] px-4 py-2 cursor-pointer">Contact</div>
                 </div>
             </div>
-            <div className="w-[80%] h-[100%] p-4 shadow-lg flex gap-[16px]">
+            <div className="max-w-[82%] h-min p-4 flex flex-wrap gap-[16px]">
                 {props.subFolders.map((item, idx) => {
                     return (
                         <div key={Folders.length - props.subFolders.length + idx} >

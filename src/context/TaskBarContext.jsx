@@ -1,6 +1,7 @@
 import React from 'react'
 import { FolderStructure } from '../apps/FolderStructure';
 import { MySelf } from '../apps/MySelf';
+import { SongPlayer } from '../apps/SongPlayer';
 import { Terminal } from '../apps/Terminal';
 import { project } from '../components/Projects';
 import { WorkCard } from '../components/WorkCard';
@@ -77,6 +78,13 @@ export const Folders = [
         windowsElement: <FolderStructure subFolders={projectsSubFolders} />,
         name: "Projects",
         icon: "folder.png"
+    },
+    {
+        link: "/",
+        onDesktop: true,
+        windowsElement: <SongPlayer />,
+        name: "Spotify",
+        icon: "spotify.png"
     },
     {
         link: "/",
