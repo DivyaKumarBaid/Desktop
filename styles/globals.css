@@ -328,4 +328,8 @@ font-family: 'Yeseva One', cursive; */
   gap:100px;
   margin: 40px 0px 20px 0px;
 }
+.forward-btn,.back-btn{
+  font-size: 25px;
+  cursor: pointer;
+}
 /* spotify */

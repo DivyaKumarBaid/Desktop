@@ -1,4 +1,5 @@
 import React from 'react'
+import { AiOutlinePoweroff } from 'react-icons/ai';
 import { BsBatteryHalf, BsFillVolumeMuteFill } from 'react-icons/bs';
 import { MdOutlineNetworkWifi3Bar } from 'react-icons/md';
 
@@ -6,7 +7,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
 ];
 
-export const UpperTaskBar = () => {
+export const UpperTaskBar = (props) => {
     var today = new Date();
     return (
         <div className="w-[100%] p-2 tracking-widest h-min flex flex-row-reverse text-xs text-[rgba(256,256,256,0.7)] gap-[42vw] cursor-default">
@@ -14,6 +15,7 @@ export const UpperTaskBar = () => {
                 <MdOutlineNetworkWifi3Bar style={{ fontSize: "16px" }} />
                 <BsFillVolumeMuteFill style={{ fontSize: "18px" }} />
                 <BsBatteryHalf style={{ fontSize: "18px" }} />
+                <AiOutlinePoweroff className='cursor-pointer' onClick={() => props.setLoggedIn(false)} style={{ fontSize: "16px" }} />
             </div>
 
             <div className="time">
