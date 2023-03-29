@@ -10,6 +10,7 @@ export const FolderModal = ({ containerRef, name, icon, idx, windowsElement }) =
     const taskValues = useTask();
 
     const handleCloseFolder = () => {
+        idx === 1 && document.getElementById("myAudio").pause();
         taskValues.setTasks(old => old.filter(e => e.containerRef !== containerRef))
         taskValues.setFolderOpen(old => old.map((ele, i) => i === idx ? false : ele))
     }
