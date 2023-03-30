@@ -10,7 +10,7 @@ export const WorkCard = (props) => {
                     <div className="projectName">
                         {props.name}
                     </div>
-                    <div className="projectDescription">
+                    <div className="projectDescription shadow-xl tracking-wider">
                         {props.description}
                     </div>
                     <div className="techStack">
@@ -20,7 +20,7 @@ export const WorkCard = (props) => {
                         <a href={props.link}><VscGithubAlt /></a>
                     </div>
                 </div>
-                <div className={props.left ? 'projectImageLeft' : 'projectImage'} style={{ backgroundImage: `url("${props.image}")` }}>
+                <div className='projectImage' style={{ backgroundImage: `url("${props.image}")` }}>
                 </div>
             </div>
         </div>

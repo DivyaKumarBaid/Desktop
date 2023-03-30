@@ -18,6 +18,21 @@ font-family: 'Yeseva One', cursive; */
   --white-color:rgb(255,255,255);
   --background-color:rgb(245,240,250);
   --card-color:rgba(150,150,180,0.1);
+    --backgorund: rgb(11, 17, 31);
+  --backgorundCard: rgba(21, 33, 59);
+  --backgorundLight: rgb(35, 50, 87);
+  --backgorundBlur: rgb(11, 17, 31,0.8);
+  --white: #ffffff;
+  --slateblue :#0e2841 ;
+  --deepblue:#0c111a ;
+  --maroon:#230911;
+  --darkbrown:#510f1a; 
+  --pinkred:#f74a59;
+  --projectImage:#f036450d;
+  --light1:rgba(243, 241, 255, 1); 
+  --light2:rgba(243, 241, 255, 0.8);
+  --light3:rgba(243, 241, 255, 0.6);
+  --light4:rgba(243, 241, 255, 0.4);
 }
 
 /* scroll bar */
@@ -166,53 +181,36 @@ font-family: 'Yeseva One', cursive; */
 /* about */
 
 /* workcard */
-
-.workSection{
-  /* margin-top: 25vh; */
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-.titleWork{
-  width: 65%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.workHead{
-  font-size: 41px;
-}
 .cardWrapper{
   display: flex;
-  flex-wrap:wrap;
   width: 100%;
-  height: 65vh;
+  height: 62vh;
+  align-items: center;
 }
-.projectImage{
-  box-shadow: -3px -3px 15px rgba(31, 31, 31, 0.18);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 80%;
-  height: 100%;
-  background-color: var(--backgorundLight);
-  border-radius: 5px;
-}
-.projectDetails{
+.projectDetailsLeft{
   position: absolute;
-  text-align: right;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  z-index: 2;
-  width: 37vw;
-  height: 50vh;
-  left:45vw;
+  align-items: flex;
+  z-index: 99;
+  width: 80%;
+  height: 80%;
+  margin-bottom: 15px;
+}
+.projectImage{
+  position: relative;
+  margin-left: 40%;
+  z-index: 1;
+  box-shadow: -3px -3px 15px rgba(0, 0, 0, 0.18);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60%;
+  height: 70%;
+  background-color: var(--backgorundLight);
+  border-radius: 5px;
 }
 
 .featured{
@@ -231,9 +229,11 @@ font-family: 'Yeseva One', cursive; */
 
 .projectDescription{
   background-color: var(--backgorundCard);
-  box-shadow: 5px 5px 15px rgba(31, 31, 31, 0.28);
   border-radius: 5px;
-  /* padding: 20px 20px 20px 20px; */
+  max-width: 35vw;
+  font-family: "DM Sans";
+  /* padding: ; */
+  padding: 16px;
   color: var(--light2);
 }
 .techStack{
@@ -251,30 +251,6 @@ font-family: 'Yeseva One', cursive; */
 }
 /* right */
 /* left */
-.projectImageLeft{
-  position: absolute;
-  width: 100%;
-  height: 55vh;
-  background-color: var(--backgorundLight);
-  border-radius: 5px;
-  left:45vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 3px 3px 15px rgba(31, 31, 31, 0.18);
-}
-.projectDetailsLeft{
-  position: relative;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 2;
-  width: 80%;
-  height: 35vh;
-  margin-bottom: 15px;
-}
 
 .projectDetailsLeft .projectDescription{
   box-shadow: -5px -5px 15px rgba(31, 31, 31, 0.3);
