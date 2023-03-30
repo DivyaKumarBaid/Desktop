@@ -20,6 +20,11 @@ export const Terminal = () => {
 
     const [commands, setCommands] = React.useState([]);
     const [input, setInput] = React.useState();
+    const bottomRef = React.useRef(null);
+
+    React.useEffect(() => {
+        bottomRef.current.scrollIntoView({ behavior: "smooth" })
+    }, [commands])
 
     const handleKeys = (e) => {
         if (e.key === "Enter") {
@@ -56,7 +61,7 @@ export const Terminal = () => {
     }
 
     return (
-        <div className='w-[100%] max-h-[100%] overflow-auto p-4 text-xs text-slate-100 tracking-widest font-["Source_Code_Pro"] leading-5' onClick={() => document.getElementById("terminalInput").focus()} >
+        <div className='w-[100%] h-[100%] overflow-auto p-4 text-xs text-slate-100 tracking-widest font-["Source_Code_Pro"] leading-5' onClick={() => document.getElementById("terminalInput").focus()} >
             <ByDefault />
             <div className="typeTerminal flex flex-col max-h-[100%] justify-start items-start">
                 {commands.map((item, idx) => {
@@ -69,18 +74,19 @@ export const Terminal = () => {
                         </div>
                     )
                 })}
-                <div className='flex items-center'>
+                <div className='flex items-center pb-[25%]'>
                     <span className='!text-[rgb(0,255,0)]'>dkb2001@DivyaKrBaid:~$</span>
                     <input
                         type="text"
                         id="terminalInput"
-                        className='w-[100%] tracking-widest'
+                        className='w-[100%] tracking-widest '
                         autoFocus={true}
                         value={input}
                         onKeyDown={handleKeys}
                         onChange={(e) => setInput(e.target.value)}
                     />
                 </div>
+                <div ref={bottomRef} />
             </div>
         </div>
     )
