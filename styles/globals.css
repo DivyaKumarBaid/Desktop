@@ -34,9 +34,21 @@ font-family: 'Yeseva One', cursive; */
   --light3:rgba(243, 241, 255, 0.6);
   --light4:rgba(243, 241, 255, 0.4);
 }
+.App{
+  background-color: black !important;
+}
 
 /* scroll bar */
 
+*[data-scroll] {
+  transition: all 1s;
+}
+*[data-scroll="in"] {
+  opacity: 1;
+}
+*[data-scroll="out"] {
+  opacity: 0;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
@@ -309,3 +321,37 @@ font-family: 'Yeseva One', cursive; */
   cursor: pointer;
 }
 /* spotify */
+
+/* animation */
+.loadingScreen{
+  background: url('/assets/loadingScreen.png');
+  /* background-position: top left; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.taskbarItems{
+  animation: transcend 0.5s;
+}
+@keyframes transcend {
+  0%{
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.upperTaskBar,.Desktop,.lowerTaskBar,.loadingScreen{
+  animation: appear 0.3s;
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/* animation */

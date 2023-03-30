@@ -17,6 +17,7 @@
     "react-dom": "18.2.0",
     "react-draggable": "^4.4.5",
     "react-icons": "^4.8.0",
+    "scroll-out": "^2.2.12",
     "typewriter-effect": "^2.19.0",
     "vercel": "^28.18.1"
   },

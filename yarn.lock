@@ -6491,6 +6491,11 @@
   dependencies:
     "loose-envify" "^1.1.0"
 
+"scroll-out@^2.2.12":
+  "integrity" "sha512-BPWQJat8mmcjQCq+l4DsibBopkmQQb5ngPJ6T9XRxRl86/LJo7V+0d3Sjd9fxzIJkZmkjoGxEAam+Urvem8VRw=="
+  "resolved" "https://registry.npmjs.org/scroll-out/-/scroll-out-2.2.12.tgz"
+  "version" "2.2.12"
+
 "semver@^6.0.0", "semver@^6.1.1", "semver@^6.1.2", "semver@^6.3.0":
   "integrity" "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"

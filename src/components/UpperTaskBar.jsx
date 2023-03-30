@@ -10,7 +10,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 export const UpperTaskBar = (props) => {
     var today = new Date();
     return (
-        <div className="w-[100%] p-2 tracking-widest h-min flex flex-row-reverse text-xs text-[rgba(256,256,256,0.7)] gap-[42vw] cursor-default">
+        <div className="w-[100%] p-2 tracking-widest h-min flex flex-row-reverse text-xs text-[rgba(256,256,256,0.7)] gap-[42vw] cursor-default upperTaskBar">
             <div className="status flex gap-[16px] items-center">
                 <MdOutlineNetworkWifi3Bar style={{ fontSize: "16px" }} />
                 <BsFillVolumeMuteFill style={{ fontSize: "18px" }} />

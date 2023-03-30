@@ -6,12 +6,12 @@ export const TaskBar = () => {
     const taskValues = useTask();
 
     return (
-        <div className="w-[100%] top-[86vh] fixed z-[15] flex justify-center">
+        <div className="w-[100%] top-[86vh] fixed z-[15] flex justify-center lowerTaskBar">
             <div className="taskBar backdrop-blur-[8px] p-4 pb-3 bg-[rgba(90,90,90,0.2)] rounded-md flex shadow-lg gap-[35px] ">
                 {taskValues.tasks.map((item, idx) => {
                     return (
                         <div
-                            className='flex flex-col items-center gap-2'
+                            className='flex flex-col items-center gap-2 taskbarItems'
                             onClick={() => {
                                 taskValues.setFolderOpen(old => old.map((ele, i) => i === item.idx ? !ele : ele))
 

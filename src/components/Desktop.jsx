@@ -15,17 +15,17 @@ export const Desktop = () => {
 
     return (
         <>
-            <div className="w-[100%] h-[95%] flex justify-between items-start">
+            <div className="w-[100%] h-[95%] overflow-hidden flex justify-between items-start Desktop">
                 <div className="homeScreen flex flex-col flex-wrap gap-[20px] max-w-[90%] w-max h-[90%] px-3 text-[rgba(256,256,256,0.8)] items-start justify-start">
                     {Folders.map((item, idx) => {
                         return item.onDesktop ? (
                             item.link != "/" ?
-                                <a href={item.link}>
-                                    <div key={idx} >
+                                <a href={item.link} key={idx} >
+                                    <div className='desktopFolders'>
                                         <SingleFolder {...item} singleClick={singleClick[idx]} doubleClick={doubleClick[idx]} idx={idx} setSingleClick={setSingleClick} setDoubleClick={setDoubleClick} windowsElement={item.windowsElement} />
                                     </div>
                                 </a> :
-                                <div key={idx} >
+                                <div key={idx} className='desktopFolders'>
                                     <SingleFolder {...item} singleClick={singleClick[idx]} doubleClick={doubleClick[idx]} idx={idx} setSingleClick={setSingleClick} setDoubleClick={setDoubleClick} windowsElement={item.windowsElement} />
                                 </div>
                         ) : null

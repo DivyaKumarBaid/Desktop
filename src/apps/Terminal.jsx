@@ -56,9 +56,9 @@ export const Terminal = () => {
     }
 
     return (
-        <div className='w-[100%] h-[100%] p-4 text-xs text-slate-100 tracking-widest font-["Source_Code_Pro"] leading-5' onClick={() => document.getElementById("terminalInput").focus()} >
+        <div className='w-[100%] max-h-[100%] overflow-auto p-4 text-xs text-slate-100 tracking-widest font-["Source_Code_Pro"] leading-5' onClick={() => document.getElementById("terminalInput").focus()} >
             <ByDefault />
-            <div className="typeTerminal flex flex-col h-[100%] justify-start items-start">
+            <div className="typeTerminal flex flex-col max-h-[100%] justify-start items-start">
                 {commands.map((item, idx) => {
                     return (
                         <div key={idx}>

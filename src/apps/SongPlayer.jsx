@@ -30,7 +30,7 @@ export const SongPlayer = () => {
 
     return (
         <div className="w-[100%] h-[100%] overflow-auto p-6 flex justify-center items-center">
-            <audio controls src={`/assets/${data[index].song}`} id="myAudio" style={{ display: "none" }} autoPlay={true} />
+            <audio controls src={`/assets/${data[index].song}`} id="myAudio" style={{ display: "none" }} />
             <div className="music-card">
                 <div className="music-card-img"
                     style={{
