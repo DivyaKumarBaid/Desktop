@@ -355,3 +355,11 @@ font-family: 'Yeseva One', cursive; */
   }
 }
 /* animation */
+
+/* gallery */
+.gallery{
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+/* gallery */

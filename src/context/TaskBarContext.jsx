@@ -5,6 +5,7 @@ import { SongPlayer } from '../apps/SongPlayer';
 import { Terminal } from '../apps/Terminal';
 import { project } from '../components/Projects';
 import { WorkCard } from '../components/WorkCard';
+import { Gallery } from '../apps/gallery';
 
 const taskContext = React.createContext();
 
@@ -28,13 +29,102 @@ const initialTasks = [
         containerRef: null,
         name: "sublime",
         icon: "sublime.svg",
+    }
+]
+
+const techSubFolders = [
+    {
+        name: `Next.jsx`,
+        icon: "next-js.svg",
+        windowsElement: <Gallery icon={"next-js.svg"} />,
+        onDesktop: false,
+        link: "/"
     },
     {
-        opened: false,
-        containerRef: null,
-        name: "chrome",
-        icon: "chrome.svg",
+        name: `React.js`,
+        icon: "react.png",
+        windowsElement: <Gallery icon={"react.png"} />,
+        onDesktop: false,
+        link: "/"
     },
+    {
+        name: `Redux.js`,
+        icon: "redux.svg",
+        windowsElement: <Gallery icon={"redux.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `fastApi.py`,
+        icon: "fastapi.svg",
+        windowsElement: <Gallery icon={"fastapi.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `Node.js`,
+        icon: "node.png",
+        windowsElement: <Gallery icon={"node.png"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `MySQL.png`,
+        icon: "mysql.svg",
+        windowsElement: <Gallery icon={"mysql.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `main.py`,
+        icon: "python.svg",
+        windowsElement: <Gallery icon={"python.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `index.js`,
+        icon: "js.png",
+        windowsElement: <Gallery icon={"js.png"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `styles.css`,
+        icon: "css.png",
+        windowsElement: <Gallery icon={"css.png"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `Java.class`,
+        icon: "java-4.svg",
+        windowsElement: <Gallery icon={"java-4.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `main.cpp`,
+        icon: "cpp.png",
+        windowsElement: <Gallery icon={"cpp.png"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `.gitignore`,
+        icon: "git.svg",
+        windowsElement: <Gallery icon={"git.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+    {
+        name: `adobe.ai`,
+        icon: "ai.svg",
+        windowsElement: <Gallery icon={"ai.svg"} />,
+        onDesktop: false,
+        link: "/"
+    },
+
 ]
 
 const projectsSubFolders = project.map((item, idx) => {
@@ -77,6 +167,13 @@ export const Folders = [
         onDesktop: true,
         windowsElement: <FolderStructure subFolders={projectsSubFolders} />,
         name: "Projects",
+        icon: "folder.png"
+    },
+    {
+        link: "/",
+        onDesktop: true,
+        windowsElement: <FolderStructure subFolders={techSubFolders} />,
+        name: "TechStack",
         icon: "folder.png"
     },
     {
@@ -132,6 +229,7 @@ export const Folders = [
         icon: "github.svg"
     },
     , ...projectsSubFolders,
+    ...techSubFolders
 ]
 
 
