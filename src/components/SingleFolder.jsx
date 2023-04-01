@@ -27,6 +27,7 @@ export const SingleFolder = (props) => {
             case 2: {
                 props.setSingleClick(old => old.map(item => false));
                 props.setDoubleClick(old => old.map((item, idx) => idx === i ? true : false));
+                taskValues.setFolderOpenZindex(old => old.map((old, i) => i === props.idx ? old = 180 : 150))
                 handleOpenFolder();
                 break;
             }

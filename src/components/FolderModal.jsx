@@ -26,9 +26,18 @@ export const FolderModal = ({ containerRef, name, icon, idx, windowsElement }) =
             {...(taskValues.folderOpen[idx] ? { timeout: 500 } : { timeout: 320 })}
             container={containerRef.current}
         >
-            <div className='fixed z-[10] bg-white'>
-                <Draggable handle={`.handleDrag${idx}`} defaultPosition={{ x: 200, y: -100 }}>
-                    <div className="w-[60vw] h-[70vh] fixed z-[10] shadow-[0px_0px_16px_rgba(0,0,0,0.5)]">
+            <div
+                className='fixed bg-white'
+                style={{ zIndex: taskValues.folderOpenZindex[idx] }}
+                onClick={() => {
+                    taskValues.setFolderOpenZindex(old => old.map((old, i) => i === idx ? old = 180 : 150))
+                }}
+            >
+                <Draggable
+                    handle={`.handleDrag${idx}`}
+                    defaultPosition={{ x: 200, y: -100 }}
+                >
+                    <div className="w-[60vw] h-[70vh] fixed shadow-[0px_0px_16px_rgba(0,0,0,0.5)]">
                         <div className={`handleDrag${idx} w-[100%] h-max bg-[rgba(90,90,90,0.2)] backdrop-blur-[8px] rounded-t flex flex-row-reverse justify-between items-center p-2 pr-4`}>
                             <div className="flex gap-4">
                                 <div className="rounded-[50%] w-[15px] h-[15px] bg-[rgb(93,223,45)] cursor-pointer" onClick={() => handleMinimiseFolder()} />

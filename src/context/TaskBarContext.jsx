@@ -237,10 +237,11 @@ export const TaskBarContextProvider = ({ children }) => {
 
     const [tasks, setTasks] = React.useState(initialTasks);
     const [folderOpen, setFolderOpen] = React.useState(Folders.map(item => false));
+    const [folderOpenZindex, setFolderOpenZindex] = React.useState(Folders.map(item => 150));
     const [loggedIn, setLoggedIn] = React.useState(false);
 
     return (
-        <taskContext.Provider value={{ loggedIn, setLoggedIn, tasks, setTasks, folderOpen, setFolderOpen }}>
+        <taskContext.Provider value={{ loggedIn, setLoggedIn, tasks, setTasks, folderOpen, setFolderOpen, folderOpenZindex, setFolderOpenZindex }}>
             {children}
         </taskContext.Provider>
     )
