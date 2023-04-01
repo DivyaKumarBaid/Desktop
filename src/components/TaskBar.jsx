@@ -13,8 +13,8 @@ export const TaskBar = () => {
                         <div
                             className='flex flex-col items-center gap-2 taskbarItems'
                             onClick={() => {
+                                taskValues.setFolderOpenZindex(old => old.map((old, i) => i === item.idx ? old = 180 : 150))
                                 taskValues.setFolderOpen(old => old.map((ele, i) => i === item.idx ? !ele : ele))
-
                             }}
                             key={idx}
                         >
