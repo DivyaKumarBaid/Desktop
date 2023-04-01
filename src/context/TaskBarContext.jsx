@@ -5,7 +5,7 @@ import { SongPlayer } from '../apps/SongPlayer';
 import { Terminal } from '../apps/Terminal';
 import { project } from '../components/Projects';
 import { WorkCard } from '../components/WorkCard';
-import { Gallery } from '../apps/gallery';
+import { Gallery } from '../apps/Gallery';
 
 const taskContext = React.createContext();
 
