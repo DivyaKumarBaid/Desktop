@@ -24,7 +24,7 @@ export const FolderModal = ({ containerRef, name, icon, idx, windowsElement }) =
         <Grow
             in={taskValues.folderOpen[idx]}
             {...(taskValues.folderOpen[idx] ? { timeout: 500 } : { timeout: 320 })}
-            container={containerRef.current}
+        // container={containerRef.current}
         >
             <div
                 className='fixed bg-white'
