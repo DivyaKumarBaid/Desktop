@@ -18,7 +18,28 @@ const helpCommands = ["ls - Shows folders on desktop", "ping - Returns pong", "c
 
 export const Terminal = () => {
 
-    const [commands, setCommands] = React.useState([]);
+    const [commands, setCommands] = React.useState([
+        {
+            user: false,
+            error: false,
+            text: ["Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.10.16.3-microsoft-standard-WSL2 x86_64)"]
+        },
+        {
+            user: false,
+            error: false,
+            text: ["* Documentation:  To know commands,type help"]
+        },
+        {
+            user: false,
+            error: false,
+            text: ["* Support:        https://divyakrbaid.tech"]
+        },
+        {
+            user: false,
+            error: false,
+            text: [" "]
+        },
+    ]);
     const [input, setInput] = React.useState();
     const bottomRef = React.useRef(null);
 
@@ -62,7 +83,7 @@ export const Terminal = () => {
 
     return (
         <div className='w-[100%] h-[100%] overflow-auto p-4 text-xs text-slate-100 tracking-widest font-["Source_Code_Pro"] leading-5' onClick={() => document.getElementById("terminalInput").focus()} >
-            <ByDefault />
+            {/* <ByDefault /> */}
             <div className="typeTerminal flex flex-col max-h-[100%] justify-start items-start">
                 {commands.map((item, idx) => {
                     return (
