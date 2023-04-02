@@ -30,8 +30,15 @@ export const FolderStructure = (props) => {
             <div className="max-w-[82%] h-min p-4 flex flex-wrap gap-[16px]">
                 {props.subFolders.map((item, idx) => {
                     return (
-                        <div key={Folders.length - props.subFolders.length + idx} >
-                            <SingleFolder {...item} singleClick={singleClick[Folders.length - props.subFolders.length + idx]} doubleClick={doubleClick[Folders.length - props.subFolders.length + idx]} idx={Folders.length - props.subFolders.length + idx} setSingleClick={setSingleClick} setDoubleClick={setDoubleClick} windowsElement={item.windowsElement} />
+                        <div key={Folders.length - props.subFolders.length + idx - 1} >
+                            <SingleFolder
+                                {...item}
+                                singleClick={singleClick[Folders.length - props.subFolders.length + idx - 1]}
+                                doubleClick={doubleClick[Folders.length - props.subFolders.length + idx - 1]}
+                                idx={Folders.length - props.subFolders.length + idx - 1}
+                                setSingleClick={setSingleClick}
+                                setDoubleClick={setDoubleClick}
+                                windowsElement={item.windowsElement} />
                         </div>
                     )
                 })}

@@ -1,17 +1,4 @@
 import React from 'react'
-const ByDefault = () => {
-    return (
-        <div>
-            Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.10.16.3-microsoft-standard-WSL2 x86_64)
-            <br />
-            * Documentation:  To know commands,type help
-            <br />
-            * Support:        https://divyakrbaid.tech
-            <br />
-            <br />
-        </div>
-    )
-}
 
 const onDesktop = ["Projects", "spotify.exe", "MySelf.txt", "Resume.pdf", "Terminal", "LinkedIn.exe", "Github.exe", "Contact.exe"]
 const helpCommands = ["ls - Shows folders on desktop", "ping - Returns pong", "clear / cls - clear the commands"]

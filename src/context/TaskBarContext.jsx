@@ -6,6 +6,7 @@ import { Terminal } from '../apps/Terminal';
 import { project } from '../components/Projects';
 import { WorkCard } from '../components/WorkCard';
 import { Gallery } from '../apps/Gallery';
+import { Contact } from '../apps/Contact';
 
 const taskContext = React.createContext();
 
@@ -16,110 +17,110 @@ const initialTasks = [
         opened: false,
         containerRef: null,
         name: "VS Code",
-        icon: "code.svg",
+        icon: "/desktopIcons/code.svg",
     },
     {
         opened: false,
         containerRef: null,
         name: "postman",
-        icon: "postman.svg",
+        icon: "/desktopIcons/postman.svg",
     },
     {
         opened: false,
         containerRef: null,
         name: "sublime",
-        icon: "sublime.svg",
+        icon: "/desktopIcons/sublime.svg",
     }
 ]
 
 const techSubFolders = [
     {
         name: `Next.jsx`,
-        icon: "next-js.svg",
-        windowsElement: <Gallery icon={"next-js.svg"} />,
+        icon: "/tech/nextjs.png",
+        windowsElement: <Gallery icon={"nextjs.png"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `React.js`,
-        icon: "react.png",
+        icon: "/tech/react.png",
         windowsElement: <Gallery icon={"react.png"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `Redux.js`,
-        icon: "redux.svg",
+        icon: "/tech/redux.svg",
         windowsElement: <Gallery icon={"redux.svg"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `fastApi.py`,
-        icon: "fastapi.svg",
+        icon: "/tech/fastapi.svg",
         windowsElement: <Gallery icon={"fastapi.svg"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `Node.js`,
-        icon: "node.png",
+        icon: "/tech/node.png",
         windowsElement: <Gallery icon={"node.png"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `MySQL.png`,
-        icon: "mysql.svg",
+        icon: "/tech/mysql.svg",
         windowsElement: <Gallery icon={"mysql.svg"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `main.py`,
-        icon: "python.svg",
+        icon: "/tech/python.svg",
         windowsElement: <Gallery icon={"python.svg"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `index.js`,
-        icon: "js.png",
+        icon: "/tech/js.png",
         windowsElement: <Gallery icon={"js.png"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `styles.css`,
-        icon: "css.png",
+        icon: "/tech/css.png",
         windowsElement: <Gallery icon={"css.png"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `Java.class`,
-        icon: "java-4.svg",
+        icon: "/tech/java-4.svg",
         windowsElement: <Gallery icon={"java-4.svg"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `main.cpp`,
-        icon: "cpp.png",
+        icon: "/tech/cpp.png",
         windowsElement: <Gallery icon={"cpp.png"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `.gitignore`,
-        icon: "git.svg",
+        icon: "/tech/git.svg",
         windowsElement: <Gallery icon={"git.svg"} />,
         onDesktop: false,
         link: "/"
     },
     {
         name: `adobe.ai`,
-        icon: "ai.svg",
+        icon: "/tech/ai.svg",
         windowsElement: <Gallery icon={"ai.svg"} />,
         onDesktop: false,
         link: "/"
@@ -130,7 +131,7 @@ const techSubFolders = [
 const projectsSubFolders = project.map((item, idx) => {
     return ({
         name: `${item.name}.exe`,
-        icon: "chrome.svg",
+        icon: "/desktopIcons/chrome.svg",
         windowsElement: <WorkCard {...item} key={"work" + idx} />,
         onDesktop: false,
         link: "/"
@@ -167,21 +168,21 @@ export const Folders = [
         onDesktop: true,
         windowsElement: <FolderStructure subFolders={projectsSubFolders} />,
         name: "Projects",
-        icon: "folder.png"
+        icon: "/desktopIcons/folder.png"
     },
     {
         link: "/",
         onDesktop: true,
         windowsElement: <FolderStructure subFolders={techSubFolders} />,
         name: "TechStack",
-        icon: "folder.png"
+        icon: "/desktopIcons/folder.png"
     },
     {
         link: "/",
         onDesktop: true,
         windowsElement: <SongPlayer />,
         name: "Spotify",
-        icon: "spotify.png"
+        icon: "/desktopIcons/spotify.png"
     },
     {
         link: "/",
@@ -189,14 +190,14 @@ export const Folders = [
         onDesktop: true,
         windowsElement: <MySelf />,
         name: "MySelf.txt",
-        icon: "notebook.png"
+        icon: "/desktopIcons/notebook.png"
     },
     {
         link: "/resume.pdf",
         onDesktop: true,
         windowsElement: <MySelf />,
         name: "Resume",
-        icon: "resume.png"
+        icon: "/desktopIcons/resume.png"
     },
     {
         link: "/",
@@ -204,31 +205,31 @@ export const Folders = [
         onDesktop: true,
         windowsElement: <Terminal />,
         name: "Terminal",
-        icon: "terminal.png",
+        icon: "/desktopIcons/terminal.png",
     },
     {
         link: "https://www.linkedin.com/in/divyakumarbaid",
         onDesktop: true,
         windowsElement: <Terminal />,
         name: "LinkedIn",
-        icon: "linkedin.svg"
+        icon: "/desktopIcons/linkedin.svg"
     },
     {
         link: "/",
         subFolder: [{}],
         onDesktop: true,
-        windowsElement: <Terminal />,
+        windowsElement: <Contact />,
         name: "Contact",
-        icon: "gmail.svg"
+        icon: "/desktopIcons/gmail.svg"
     },
     {
         link: "https://github.com/DivyaKumarBaid",
         onDesktop: true,
         windowsElement: <Terminal />,
         name: "Github",
-        icon: "github.svg"
+        icon: "/desktopIcons/github.svg"
     },
-    , ...projectsSubFolders,
+    ...projectsSubFolders,
     ...techSubFolders
 ]
 

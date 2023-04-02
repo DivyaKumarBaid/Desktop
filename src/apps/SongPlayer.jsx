@@ -5,10 +5,12 @@ import { ImNext, ImPrevious } from 'react-icons/im';
 export const SongPlayer = () => {
     const data = [
         {
+            name: "LiSA Demon Slayer: Kimetsu no Yaiba",
             thumbnail: "music.png",
             song: "song.mp3",
         },
         {
+            name: "Blue Bird from Naruto Shippuden",
             thumbnail: "naruto.png",
             song: "naruto.mp3",
         },
@@ -30,13 +32,16 @@ export const SongPlayer = () => {
 
     return (
         <div className="w-[100%] h-[100%] overflow-auto p-6 flex justify-center items-center">
-            <audio controls src={`/assets/${data[index].song}`} id="myAudio" style={{ display: "none" }} />
+            <audio controls src={`/assets/songs/${data[index].song}`} id="myAudio" style={{ display: "none" }} />
             <div className="music-card">
                 <div className="music-card-img"
                     style={{
-                        background: `url(/assets/${data[index].thumbnail})`,
+                        background: `url(/assets/songsThumbnail/${data[index].thumbnail})`,
                     }}
                 >
+                </div>
+                <div className='max-w-[100%] mt-2'>
+                    <marquee behavior="" direction="">{data[index].name}</marquee>
                 </div>
                 <div className="controls-container">
                     <ImPrevious
