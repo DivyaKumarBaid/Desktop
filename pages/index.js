@@ -8,10 +8,9 @@ import ScrollOut from "scroll-out";
 import Head from "next/head";
 
 export default function Home() {
-
-  const [loggedIn, setLoggedIn] = React.useState(true);
+  const [loggedInNew, setLoggedInNew] = React.useState(false);
+  const [onceClicked, setClicked] = React.useState(true);
   return (
-
     <>
       <Head>
         <title>Divyakr Baid - Developer</title>
@@ -30,15 +29,14 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/assets/Logo.png" />
       </Head>
-      <div className="App min-w-[100vw] min-h-[100vh] bg-black">
+      <div className="App2 min-w-[100vw] min-h-[100vh] bg-black">
         <TaskBarContextProvider>
-          {loggedIn ?
-            <div className="desktop font-['DM_Sans']">
-              <UpperTaskBar setLoggedIn={setLoggedIn} />
-              <Desktop />
-              <TaskBar />
-            </div> :
-            <Login setLoggedIn={setLoggedIn} />}
+          {!loggedInNew && <Login setLoggedIn={setLoggedInNew} onceClicked={onceClicked} setClicked={setClicked} />}
+          <div className="desktop font-['DM_Sans']">
+            <UpperTaskBar setLoggedIn={setLoggedInNew} />
+            <Desktop />
+            <TaskBar />
+          </div>
         </TaskBarContextProvider>
       </div>
     </>
